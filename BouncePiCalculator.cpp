@@ -3,6 +3,7 @@
 #include <cmath>
 #include <chrono>
 
+
 int main()
 {
     std::cout << "Enter precision (d.p.): ";
@@ -21,7 +22,7 @@ int main()
     double u2 = 0;
 
     long long int i = 0;
-    
+
     std::cout << "Show working? (Y/N): ";
     std::string showWorkingInput = "";
 
@@ -37,9 +38,6 @@ int main()
         std::cin >> showProgressInput;
         showProgress = showProgressInput == "Y" | showProgressInput == "y";
     }
-
-    //Stopwatch stopwatch = new Stopwatch();
-    //stopwatch.Start();
 
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -81,7 +79,6 @@ int main()
     }
 
     auto finish = std::chrono::high_resolution_clock::now();
-    //stopwatch.Stop();
 
     std::chrono::duration<double> elapsed = finish - start;
 
@@ -96,9 +93,9 @@ int main()
         std::cout << "Pi: " + outString + "   Total bounces: " + std::to_string(i) + "\n";
     }
 
-    std::cout << "Finished in " + std::to_string(elapsed.count()*1000) + "ms (Time may be heavily impacted by showing working)" + "\n";
-
-    //Console.WriteLine("Finished in " + stopwatch.ElapsedMilliseconds + "ms (Time may be heavily impacted by showing working)");
+    std::cout << "Finished in " + std::to_string(elapsed.count() * 1000) + "ms (Time may be heavily impacted by showing working)";
 
     std::cin.get();
+    std::cin.get();
+    return 0;
 }
